@@ -1,0 +1,23 @@
+vh e vw no body
+rem e em nas fontes
+e % no resto
+
+
+body{
+  height: 100vh;
+  width: 100vw
+}
+div{
+  display: flex;
+}
+
+@media(orientation: landscape){
+  div{
+    flex-direction: row;
+  }
+}
+@media(orientation: portrait){
+  div{
+    flex-direction: column;
+  }
+}
