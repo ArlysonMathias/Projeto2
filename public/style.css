@@ -10,16 +10,22 @@ body{
     
 }
 
-header{
-    
-    width: 100%;
+header {
+    padding: 0.8rem;
+    width: 100%;    
     background-color: red;
 }
-header img{
-   width: 10%;
-   display: flex;
-   margin: auto;
+  header h2 {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    margin: 1rem;
+  }
+
+main{
+    margin: 0 10rem 0 10rem;
 }
+
 
 #menu{
     list-style: none;
@@ -46,18 +52,66 @@ header img{
     /* transition: background 0.3s; */
 }
 
-main{
-    margin: 0 10rem 0 10rem;
+section#cards{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 4rem 0 4rem 0;
+    width: 80%;
+    gap: 0.5rem;
+    
+    
+    
+
 }
 
+section#cards a{
+    text-decoration: none;
+
+}
+
+section#cards div.card{
+    width: 25%;
+    box-shadow:  6px 6px 6px 3px #00000030 ;
+    padding: 2rem;
+    gap: 3rem;
+    margin-bottom: 2rem;
+    border: 2px solid red;
+    
+    
+}
+
+section#cards div.card img{
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+    width: 60%
+    
+}
+
+section#cards div.card h3{
+    display: flex;
+    justify-content: center;
+    color: black;
+}
+section#cards div.card p{
+    font-size: 1rem;
+    margin: 1rem;
+    color: black;
+}
+
+section#cards div.card:hover{
+    transform: scale(1.1);
+}
 
 footer{
     
     display: flex;
     justify-content: center;
+    position:relative;
+    /* bottom: 0; */
     font-size: 0.6rem;
     background-color: red;
     color: #fff;
 }
-
 

@@ -12,6 +12,7 @@ header {
   padding: 0.8rem;
   width: 100%;
   background-color: red;
+  
 }
 header h2 {
   display: flex;
@@ -43,12 +44,11 @@ header h2 {
 section#cadastro {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   padding: 10rem;
 }
 
 section#cadastro form {
-  width: 50%;
+  width: 100%;
 }
 
 section#cadastro form input {
@@ -80,10 +80,20 @@ section#cadastro button:hover {
   transition: 0.2s ease-in-out;
 }
 
-footer {
-  display: flex;
-  justify-content: center;
-  font-size: 0.6rem;
-  background-color: red;
-  color: #fff;
+section#cadastro img{
+    width: 50%;
+    height: 50%;
+    padding: 2rem;
+}
+
+footer{
+    
+    display: flex;
+    justify-content: center;
+    position:fixed;
+    bottom: 0;
+    left: 50%;
+    font-size: 0.6rem;
+    background-color: red;
+    color: #fff;
 }

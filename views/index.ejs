@@ -7,27 +7,41 @@
     <link rel="stylesheet" href="style.css" />
     <title>Projeto Pokedex</title>
   </head>
- <body>
-   <header>
-     <img src="https://imagensemoldes.com.br/wp-content/uploads/2020/04/Logo-Pokebola-Pok%C3%A9mon-PNG.png" alt="Esta é um logo da pokebola">   
-      
+  <body>
+    <header>
+      <h2>Pokedex</h2>
+
       <nav id="menu">
-        <ul >
-          <li><a href="./">Home</a></li>
-          <li><a href="./cadastro">Cadastrar pokemon</a></li>
-          <li><a href="./listaPokemon">Pokedex</a></li>
+        <ul>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="./cadastro">Cadastrar pokemon</a></li>
+          </ul>
         </ul>
+      </nav>
+    </header>
 
-      </nav>       
-   </header>
+    <main>
+      <section id="cards">
+        <% pokedex.forEach((pokemon) =>{ %>
 
-   <main>
+        <div class="card">
+          <a href="detalhes">
+            <p class="id">ID: <%=pokemon.id %></p>
+            <img
+              src="<%=pokemon.imagem %> "
+              alt="Essa é uma imagem do pokemon"
+            />
+            <h3>Nome: <%=pokemon.nome %></h3>
+            <p>Tipo: <%=pokemon.tipo %></p>
+          </a>
+        </div>
 
-   </main>
-
-
-   <footer>
-    <p>Projeto criado por A.Mathias para fins educativos. BlueEdtech</p>
-  </footer>
- </body>
+        <% }) %>
+      </section>
+    </main>
+    <footer>
+      <p>Projeto criado por A.Mathias para fins educativos. BlueEdtech</p>
+    </footer>
+  </body>
 </html>

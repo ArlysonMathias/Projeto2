@@ -7,8 +7,8 @@ const __dirname = path.resolve(path.dirname(""));
 //setando a engine do ejs
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public"))); // fazendo o js-back enxergar onde estão os arquivos de css e js
-app.use(express.urlencoded()); // aqui é pra fazer com que o JSON receba os dados vindo do meu servidor
-
+app.use(express.urlencoded({ extended: true })); // aqui é pra fazer com que o JSON receba os dados vindo do meu servidor
+app.use(express.json());
 
 const pokedex = [
   {
@@ -61,9 +61,24 @@ app.get("/", (req, res) => {
   res.render("index", { pokedex, pokemon });
 });
 
+//rota detalhes
+app.get("/detalhes/:id", (req, res) => {
+    let pokemon;
+    pokedex.filter((element) => {
+      if(element.id == req.params.id) {
+        pokemon = element;
+      }
+    });
+  
+    console.log(pokemon)
+    res.render("../views/detalhes", { pokemon 
+      });
+    
+  });
+  
+
 app.get("/cadastro", (req, res) => {
   //essa rota renderiza a página de cadastro
-
   res.render("../views/cadastro");
 });
 
@@ -73,31 +88,8 @@ app.post("/add", (req, res) => {
   pokemon.id = pokedex.length + 1;
   pokedex.push(pokemon);
 
-  res.redirect("/cadastro", { pokedex, pokemon });
+  res.redirect("/");
 });
 
-app.get("/listaPokemon", (req, res) => {
-  //rota para pokedex
-
-  res.render("../views/listaPokemon", { pokedex, pokemon });
-});
-app.get("/detalhes/:id", (req, res) => {
-  const id = +req.params.id - 1;
-  pokemon = pokedex.find((pokemon) => pokemon.id === id);
-  res.redirect("/cadastro");
-});
-
-app.post("/update/:id", (req, res) => {
-  const id = +req.params.id - 1;
-  const newPokemon = req.body;
-
-  newPokemon.id = id + 1;
-
-  pokedex[id] = newPokemon;
-
-  pokemon = undefined;
-
-  res.redirect("/listaPokemon");
-});
 
 app.listen(port);
