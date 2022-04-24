@@ -9,7 +9,12 @@
   </head>
   <body>
     <header>
-      <h2>Pokedex</h2>
+      <div id="imgHeader">
+        <img
+          src="https://res.cloudinary.com/lmn/image/upload/c_limit,h_360,w_640/e_sharpen:100/f_auto,fl_lossy,q_auto/v1/gameskinnyc/a/6/0/a6078c-2fd9033b2be04c9b947d1aac6cdaef60-a2551.gif"
+          alt="Imagem de background"
+        />
+      </div>
 
       <nav id="menu">
         <ul>
@@ -26,7 +31,7 @@
         <% pokedex.forEach((pokemon) =>{ %>
 
         <div class="card">
-          <a href="detalhes">
+          <a href="detalhes/<%=pokemon.id %>  ">
             <p class="id">ID: <%=pokemon.id %></p>
             <img
               src="<%=pokemon.imagem %> "

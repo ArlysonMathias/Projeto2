@@ -8,27 +8,23 @@ body {
   width: 100vw;
   height: 100vh;
 }
-
 header {
   padding: 0.8rem;
-  width: 100%;
+  /* width: 100%;     */
   background-color: red;
 }
-header div#imgHeader {
+header img {
   display: flex;
   justify-content: center;
   margin: auto;
-  width: 80px;
-}
-
-main {
-  margin: 0 10rem 0 10rem;
+  width: 10%;
 }
 
 #menu {
   list-style: none;
   margin: 2rem;
   padding: 0;
+  font-size: 1rem;
 }
 
 #menu li {
@@ -44,20 +40,16 @@ main {
 
 #menu li a:hover {
   background-color: rgb(3, 9, 15);
-  /* transition: background 0.3s; */
+}
+
+main {
+  margin: 0 10rem 0 10rem;
 }
 
 section#cards {
   display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  margin: 4rem 0 4rem 0;
-  width: 80%;
-  gap: 0.5rem;
-}
-
-section#cards a {
-  text-decoration: none;
+  justify-content: center;
+  margin: 2rem 0 1rem 0;
 }
 
 section#cards div.card {
@@ -87,17 +79,15 @@ section#cards div.card p {
   color: black;
 }
 
-section#cards div.card:hover {
-  transform: scale(1.1);
-}
-
 footer {
   display: flex;
-  justify-content: center;
   position: relative;
-  font-size: 0.6rem;
+  justify-content: center;
+  bottom: 0;
+  font-size: 0.8rem;
   background-color: red;
   color: #fff;
+  margin-top: 15rem;
 }
 
 @media screen and (max-width: 480px) {
@@ -108,12 +98,11 @@ footer {
 
   header {
     width: 100%;
-  }
-
-  header img {
     display: flex;
     justify-content: center;
-    width: 240px;
+  }
+  header img {
+    width: 120px;
   }
 
   section#cards {
@@ -122,7 +111,6 @@ footer {
     width: 50%;
     height: 50%;
   }
-
   section#cards div.card {
     width: 240px;
     text-align: center;
@@ -138,16 +126,7 @@ footer {
   }
 
   section#cards div.card p {
-    font-size: 0.8rem;
-  }
-
-  footer {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    /* bottom: 0; */
-    font-size: 0.6rem;
-    background-color: red;
-    color: #fff;
+    font-size: 1rem;
+    padding: 0.3rem;
   }
 }

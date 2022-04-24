@@ -18,11 +18,11 @@ const pokedex = [
     imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/155.png",
     descricao:
       "Cyndaquil se protege acendendo as chamas em suas costas. As chamas são vigorosas se o Pokémon estiver com raiva. No entanto, se estiver cansado, as chamas crepitam irregularmente com combustão incompleta.",
-    //     altura: "0.5m",
-    //     peso:"7.9kg" ,
-    //     categoria: "Rato de fogo",
-    //     habilidade:"chama" ,
-    //     fraqueza: "Água, Terra, Pedra"
+    altura: "0.5m",
+    peso: "7.9kg",
+    categoria: "Rato de fogo",
+    habilidade: "chama",
+    fraqueza: "Água, Terra, Pedra",
   },
   {
     id: 2,
@@ -31,11 +31,11 @@ const pokedex = [
     imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/158.png",
     descricao:
       "Apesar da pequenez de seu corpo, as mandíbulas de Totodile são muito poderosas. Embora o Pokémon possa pensar que está apenas beliscando de brincadeira, sua mordida tem poder suficiente para causar ferimentos graves.",
-    // altura: "0.6m",
-    // peso:"9.5kg" ,
-    // categoria: "Mandíbula Grande",
-    // habilidade:"Torrente" ,
-    // fraqueza: "Grama, Elétrico"
+    altura: "0.6m",
+    peso: "9.5kg",
+    categoria: "Mandíbula Grande",
+    habilidade: "Torrente",
+    fraqueza: "Grama, Elétrico",
   },
   {
     id: 3,
@@ -44,11 +44,11 @@ const pokedex = [
     imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/152.png",
     descricao:
       "Na batalha, Chikorita agita sua folha para manter o inimigo afastado. No entanto, uma fragrância doce também emana da folha, acalmando o Pokémon em luta e criando uma atmosfera acolhedora e amigável ao redor.",
-    // altura: "0.9m",
-    // peso:"6.4kg" ,
-    // categoria: "folha",
-    // habilidade:"Superar" ,
-    // fraqueza: "fogo, veneno, inseto, gelo"
+    altura: "0.9m",
+    peso: "6.4kg",
+    categoria: "folha",
+    habilidade: "Superar",
+    fraqueza: "fogo, veneno, inseto, gelo",
   },
 ];
 
@@ -63,19 +63,16 @@ app.get("/", (req, res) => {
 
 //rota detalhes
 app.get("/detalhes/:id", (req, res) => {
-    let pokemon;
-    pokedex.filter((element) => {
-      if(element.id == req.params.id) {
-        pokemon = element;
-      }
-    });
-  
-    console.log(pokemon)
-    res.render("../views/detalhes", { pokemon 
-      });
-    
+  let pokemon;
+  pokedex.filter((element) => {
+    if (element.id == req.params.id) {
+      pokemon = element;
+    }
   });
-  
+
+  console.log(pokemon);
+  res.render("../views/detalhes", { pokemon });
+});
 
 app.get("/cadastro", (req, res) => {
   //essa rota renderiza a página de cadastro
@@ -90,6 +87,5 @@ app.post("/add", (req, res) => {
 
   res.redirect("/");
 });
-
 
 app.listen(port);

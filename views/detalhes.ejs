@@ -1,30 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Detalhes</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style_detalhes.css" />
 
+    <title>Detalhes</title>
+  </head>
+  <body>
     <header>
-        <img src="https://imagensemoldes.com.br/wp-content/uploads/2020/04/Logo-Pokebola-Pok%C3%A9mon-PNG.png" alt="Esta é um logo da pokebola">   
-         
-         <nav id="menu">
-           <ul >
-             <li><a href="./">Home</a></li>
-             <li><a href="./cadastro">Cadastrar pokemon</a></li>
-             <li><a href="./listaPokemon">Pokedex</a></li>
-           </ul>
-   
-         </nav>  
-   </header> 
+      <img
+        src="https://imagensemoldes.com.br/wp-content/uploads/2020/04/Logo-Pokebola-Pok%C3%A9mon-PNG.png"
+        alt="Esta é um logo da pokebola"
+      />
+
+      <nav id="menu">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/cadastro">Cadastrar pokemon</a></li>
+        </ul>
+      </nav>
+    </header>
 
     <main>
-        <%=pokemon.nome%> 
+      <section id="cards">
+        <div class="card">
+          <p class="id">ID: <%=pokemon.id %></p>
+          <img src="<%=pokemon.imagem %> " alt="Essa é uma imagem do pokemon" />
+          <h3>Nome: <%=pokemon.nome %></h3>
+          <p>Tipo: <%=pokemon.tipo %></p>
+          <p>Descrição: <%=pokemon.descricao %></p>
+          <p>Altura: <%=pokemon.altura %></p>
+          <p>Peso: <%=pokemon.peso %></p>
+          <p>Categoria: <%=pokemon.categoria %></p>
+          <p>Habilidade: <%=pokemon.habilidade %></p>
+          <p>Fraquzas: <%=pokemon.fraqueza %></p>
+        </div>
+      </section>
     </main>
-    
-</body>
+
+    <footer>
+      <p>Projeto criado por A.Mathias para fins educativos. BlueEdtech</p>
+    </footer>
+  </body>
 </html>
