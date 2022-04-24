@@ -1,7 +1,7 @@
 import express from "express"; //importanto a biblioteca do express
 import path from "path";
 const app = express(); // passando a biblioteca para a variavel 'app'
-const port = process.env.port || 3000; //passando a porta usada para a variável por
+const PORT = process.env.PORT || 3000; //passando a porta usada para a variável por
 const __dirname = path.resolve(path.dirname(""));
 
 //setando a engine do ejs
@@ -88,4 +88,4 @@ app.post("/add", (req, res) => {
   res.redirect("/");
 });
 
-app.listen(port);
+app.listen(PORT);
