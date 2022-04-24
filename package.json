@@ -1,7 +1,7 @@
 {
   "name": "projeto2",
   "version": "1.0.0",
-  "description": "",
+  "description": "Projeto criado sobre com temática pokedex",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -12,7 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/ArlysonMathias/Projeto2.git"
   },
-  "author": "",
+  "author": "A. Mathias",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ArlysonMathias/Projeto2/issues"
