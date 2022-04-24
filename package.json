@@ -1,7 +1,7 @@
 {
   "name": "projeto2",
   "version": "1.0.0",
-  "description": "Projeto criado sobre com temática pokedex",
+  "description": "Projeto criado com temática pokedex",
   "main": "index.js",
   "type": "module",
   "scripts": {
